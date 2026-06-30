@@ -304,7 +304,7 @@ def main():
         # こうかとんと衝突した爆弾リスト
         if len(pg.sprite.spritecollide(bird, bombs, True)) > 0:
             life.num -= 1  # ライフ（残機数）を1減らす
-            if life.num < 0:
+            if life.num <= 0:
                 bird.change_img(8, screen)  # こうかとん悲しみエフェクト
                 score.update(screen)
                 pg.display.update()
